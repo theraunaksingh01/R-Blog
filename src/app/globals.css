@@ -301,3 +301,40 @@ img { display: block; }
   border-color: var(--c-red);
   color: #fff;
 }
+
+
+/* Blog Post */
+/* ── Add these to the bottom of your globals.css ── */
+
+/* Back link hover */
+a.hover-red-text:hover {
+  color: var(--c-red) !important;
+}
+
+/* Share button hover */
+a[href*="twitter"]:hover,
+a[href*="linkedin"]:hover {
+  border-color: var(--c-red) !important;
+  color: var(--c-red) !important;
+}
+
+/* Blog body links */
+article a {
+  color: var(--c-red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s;
+}
+article a:hover { opacity: 0.75; }
+
+/* Blog first paragraph drop cap - elegant editorial touch */
+article > p:first-of-type::first-letter {
+  font-family: var(--f-display);
+  font-size: 4.2em;
+  font-weight: 900;
+  float: left;
+  line-height: 0.75;
+  margin-right: 8px;
+  margin-top: 6px;
+  color: var(--c-red);
+}
